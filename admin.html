@@ -1,0 +1,421 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Camera Feed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-gray-100">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div class="w-16 bg-white flex flex-col items-center py-4">
+      <div class="mb-4">
+       
+      </div>
+      <div class="flex flex-col space-y-4">
+        <i class="fas fa-home text-xl text-gray-600"></i>
+        <i class="fas fa-box text-xl text-gray-600" title="Inventory"></i>
+        <i class="fas fa-truck text-xl text-gray-600" title="Shipments"></i>
+        <i class="fas fa-warehouse text-xl text-gray-600" title="Storage"></i>
+        <i class="fas fa-list-alt text-xl text-gray-600" title="Orders"></i>
+        <i class="fas fa-chart-line text-xl text-gray-600" title="Analytics"></i>
+        <i class="fas fa-dollar-sign text-xl text-gray-600" title="Pricing"></i>
+        <i class="fas fa-users text-xl text-gray-600" title="Team"></i>
+        <i class="fas fa-calendar-alt text-xl text-gray-600" title="Scheduling"></i>
+        <i class="fas fa-tools text-xl text-gray-600" title="Maintenance"></i>
+        <i class="fas fa-question-circle text-xl text-gray-600" title="Help"></i>
+        <i class="fas fa-sign-out-alt text-xl text-gray-600" title="Logout"></i>
+        <i class="fas fa-plus text-xl text-gray-600"></i>
+        <i class="fas fa-bell text-xl text-gray-600"></i>
+        <i class="fas fa-cog text-xl text-gray-600"></i>
+      </div>
+      <div class="mt-auto mb-4">
+        <img alt="User Avatar" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/dubWRmTuhoYbp8zlWHW4_AximF4xxJzb7Azse7KxZoQ.jpg" width="40"/>
+      </div>
+    </div>
+    
+    
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col">
+      <!-- Header -->
+      <div class="flex items-center justify-between bg-white p-4 shadow">
+        <div class="flex items-center space-x-4">
+          <img alt="Logo" class="w-10 h-10" height="40" src="https://storage.googleapis.com/a1aa/image/xL8yE67n0CVGZ-opGCuSXNS0CLeYsF9mgitz68s4w2E.jpg" width="40"/>
+          <div class="flex space-x-4">
+            <button class="px-4 py-2 bg-gray-200 rounded">All</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Storage</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Receiving</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Loading</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Inventory</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Packaging</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Shipping</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Office</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Security</button>
+            <button class="px-4 py-2 bg-gray-200 rounded">Maintenance</button>
+            
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-search text-xl text-gray-600"></i>
+          <i class="fas fa-ellipsis-v text-xl text-gray-600"></i>
+        </div>
+      </div>
+      <!-- Content -->
+      <div class="flex-1 flex overflow-hidden">
+        <!-- Camera Feeds -->
+
+        
+        <div class="flex-1 overflow-y-auto p-4 space-y-4">
+          <div>
+
+
+            <h2 class="text-xl font-semibold mb-2">Warehouse</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative">
+                <iframe alt="Backyard Camera 3" class="w-full h-full object-cover rounded" height="300" src="http://192.168.201.33:4747/video" allowfullscreen></iframe>
+                 
+                  
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 1</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video" style="color: red;"></i>
+
+                  <span>86</span>
+                </div>
+              </div>
+              <div class="relative">
+                <video alt="Basement Camera 2" class="w-full h-full object-cover rounded" height="300" controls autoplay loop>
+                    <source src="videos/pp56s.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                    <div>Camera 2</div>
+                    <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-video" style="color: red;"></i>
+                    <span>56</span>
+                </div>
+           
+            
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-xl font-semibold mb-2">Backspace  WareHouse</h2>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="relative">
+                <iframe alt="Backyard Camera 3" class="w-full h-full object-cover rounded" height="300" src="videos/pp3.mp4" allowfullscreen></iframe>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 1</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video" style="color: red;"></i>
+                  <span>86</span>
+                </div>
+              </div>
+              
+              <div class="relative">
+                <!-- Replace the video source with your IP camera feed URL -->
+                <video alt="Backyard Camera 4" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                    <!-- Replace "115.240.99.*" with the actual full IP address and port -->
+                    <source src="videos/pp454.mp4"  # Replace with the correct IP address, port, and stream path
+                     type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                    <div>Camera 2</div>
+                    <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-video" style="color: red;"></i>
+                    <span>18</span>
+                </div>
+            </div>
+            
+              <div class="relative">
+                <video alt="Basement Camera 5" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                  <source src="videos/pp7.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 1</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video" style="color: red;"></i>
+                  <span>86</span>
+                </div>
+              </div> <div class="relative">
+                <video alt="Basement Camera 6" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                  <source src="videos/pp3.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 1</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video"></i>
+                  <span>86</span>
+                </div>
+              </div> <div class="relative">
+                <video alt="Basement Camera 7" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                  <source src="videos/pp7.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 1</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video"></i>
+                  <span>86</span>
+                </div>
+              </div>
+              
+              
+              <div class="relative">
+                <video alt="Backyard Camera 8" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                  <source src="videos/pp8.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 3</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video"></i>
+                  <span>24</span>
+                </div>
+              </div>
+              <div class="relative">
+                <video alt="Backyard Camera 3" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                  <source src="videos/pp8.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 3</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video"></i>
+                  <span>24</span>
+                </div>
+              </div>
+              <div class="relative">
+                <video alt="Backyard Camera 3" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                  <source src="videos/pp8.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 3</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video"></i>
+                  <span>24</span>
+                </div>
+              </div>
+              <div class="relative">
+                <video alt="Backyard Camera 4" class="w-full h-full object-cover rounded" height="300" controls autoplay>
+                  <source src="videos/pp7.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm">
+                  <div>Camera 4</div>
+                  <div>15-05-2024 12:19:49 PM</div>
+                </div>
+                <div class="absolute top-0 left-0 bg-black bg-opacity-50 text-white p-2 text-sm flex items-center space-x-2">
+                  <i class="fas fa-wifi"></i>
+                  <i class="fas fa-video"></i>
+                  <span>14</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Feed -->
+        <div class="w-64 bg-white overflow-y-auto p-4">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-semibold">Feed</h2>
+            <i class="fas fa-filter text-xl text-gray-600"></i>
+          </div>
+          <div class="flex items-center space-x-2 mb-4">
+            <button class="px-2 py-1 bg-gray-200 rounded">Thu 09</button>
+            <button class="px-2 py-1">Fri 10</button>
+            <button class="px-2 py-1">Sat 11</button>
+            <button class="px-2 py-1">Sun 12</button>
+            <button class="px-2 py-1">Mon 13</button>
+            <button class="px-2 py-1">Tue 14</button>
+            <button class="px-2 py-1 bg-gray-200 rounded">Wed 15</button>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <img alt="Front Door 2" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/BTcWlpWuU3a-BBabCjbS4bdQpBrM0voGJdfZztvh0bs.jpg" width="80"/>
+              <div>
+                <div>Front Door 2</div>
+                <div class="text-sm text-gray-500">12:19 PM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Front Door 2" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/BTcWlpWuU3a-BBabCjbS4bdQpBrM0voGJdfZztvh0bs.jpg" width="80"/>
+              <div>
+                <div>Front Door 2</div>
+                <div class="text-sm text-gray-500">11:45 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Front Door 1" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/6TP5CmQcbKey74om9pPb4utb2eNS4uiVDTEcISeJWm8.jpg" width="80"/>
+              <div>
+                <div>Front Door 1</div>
+                <div class="text-sm text-gray-500">11:36 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Front Door 1" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/6TP5CmQcbKey74om9pPb4utb2eNS4uiVDTEcISeJWm8.jpg" width="80"/>
+              <div>
+                <div>Front Door 1</div>
+                <div class="text-sm text-gray-500">11:18 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Front Door 2" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/BTcWlpWuU3a-BBabCjbS4bdQpBrM0voGJdfZztvh0bs.jpg" width="80"/>
+              <div>
+                <div>Front Door 2</div>
+                <div class="text-sm text-gray-500">10:56 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Loading Dock" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/1S67gY7IO2vgbX5CL1LsVqAjEdoMeIr.jpg" width="80"/>
+              <div>
+                <div>Loading Dock</div>
+                <div class="text-sm text-gray-500">10:34 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Receiving Dock" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/a1EpoIWOSpg.jpg" width="80"/>
+              <div>
+                <div>Receiving Dock</div>
+                <div class="text-sm text-gray-500">10:22 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Office Entry" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/sDbWlfHgILIoSTqZsMY.jpg" width="80"/>
+              <div>
+                <div>Office Entry</div>
+                <div class="text-sm text-gray-500">10:05 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Warehouse 1" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/9EdoNsPb0REiS.jpg" width="80"/>
+              <div>
+                <div>Warehouse 1</div>
+                <div class="text-sm text-gray-500">9:48 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Warehouse 2" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/2PONtBfKs3fsv.jpg" width="80"/>
+              <div>
+                <div>Warehouse 2</div>
+                <div class="text-sm text-gray-500">9:34 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Security Check" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/s7NHwELOpmJgSTo.jpg" width="80"/>
+              <div>
+                <div>Security Check</div>
+                <div class="text-sm text-gray-500">9:18 AM</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <img alt="Maintenance Room" class="w-20 h-15 object-cover rounded" height="60" src="https://storage.googleapis.com/a1aa/image/PqOGbLjWYscMO1t.jpg" width="80"/>
+              <div>
+                <div>Maintenance Room</div>
+                <div class="text-sm text-gray-500">9:05 AM</div>
+              </div>
+            </div>
+          </div>
+          
+                <script>
+                  // Function to redirect based on the selected date
+function redirectToDate(date) {
+    // You can replace the URL with the actual page you want to redirect to
+    const url = `https://example.com/feed?date=${date}`;
+    window.location.href = url;
+}
+
+// Function to populate feed items
+function populateFeedItems() {
+    const feedItems = [
+        {
+            title: "Front Door 2",
+            time: "12:19 PM",
+            imgSrc: "https://storage.googleapis.com/a1aa/image/BTcWlpWuU3a-BBabCjbS4bdQpBrM0voGJdfZztvh0bs.jpg"
+        },
+        {
+            title: "Front Door 2",
+            time: "11:45 AM",
+            imgSrc: "https://storage.googleapis.com/a1aa/image/BTcWlpWuU3a-BBabCjbS4bdQpBrM0voGJdfZztvh0bs.jpg"
+        },
+        {
+            title: "Front Door 1",
+            time: "11:36 AM",
+            imgSrc: "https://storage.googleapis.com/a1aa/image/6TP5CmQcbKey74om9pPb4utb2eNS4uiVDTEcISeJWm8.jpg"
+        },
+        {
+            title: "Front Door 1",
+            time: "11:18 AM",
+            imgSrc: "https://storage.googleapis.com/a1aa/image/6TP5CmQcbKey74om9pPb4utb2eNS4uiVDTEcISeJWm8.jpg"
+        },
+        {
+            title: "Front Door 2",
+            time: "10:56 AM",
+            imgSrc: "https://storage.googleapis.com/a1aa/image/BTcWlpWuU3a-BBabCjbS4bdQpBrM0voGJdfZztvh0bs.jpg"
+        }
+    ];
+
+    const feedContainer = document.getElementById('feedItems');
+    feedItems.forEach(item => {
+        const itemDiv = document.create 
+Element('div');
+        itemDiv.className = 'flex items-center space-x-4';
+        itemDiv.innerHTML = `
+            <img alt="${item.title}" class="w-20 h-15 object-cover rounded" height="60" src="${item.imgSrc}" width="80"/>
+            <div>
+                <div>${item.title}</div>
+                <div class="text-sm text-gray-500">${item.time}</div>
+            </div>
+        `;
+        feedContainer.appendChild(itemDiv);
+    });
+}
+
+// Call the function to populate feed items on page load
+window.onload = populateFeedItems;
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

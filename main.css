@@ -1,0 +1,181 @@
+/* Base styles for the loader and layout */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-top: 20px;
+    color: #007CFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Loader animations */
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.loader {
+    display: flex;
+    margin: 0.25em 0;
+}
+
+.w-2 {
+    width: 0.5em;
+}
+
+.dash {
+    animation: dashArray 2s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+}
+
+.spin {
+    animation: spinDashArray 2s ease-in-out infinite,
+        spin 8s ease-in-out infinite,
+        dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 270 90;
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 365;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
+}
+
+/* Centering the loading animation on the page */
+/* body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f6;
+}
+  
+  .loading {
+    --speed-of-animation: 1s;
+    --gap: 6px;
+    --first-color: #016eeb;
+    --second-color: #f5fd09;
+    --third-color: #f602c9;
+    --fourth-color: #0bff44;
+    --fifth-color: #0ff845;
+    --fifth-color: #06fff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    gap: 6px;
+    height: 100px;
+  }
+  
+  .loading span {
+    width: 4px;
+    height: 50px;
+    background: var(--first-color);
+    animation: scale var(--speed-of-animation) ease-in-out infinite;
+  }
+  
+  .loading span:nth-child(2) {
+    background: var(--second-color);
+    animation-delay: -0.8s;
+  }
+  
+  .loading span:nth-child(3) {
+    background: var(--third-color);
+    animation-delay: -0.7s;
+  }
+  
+  .loading span:nth-child(4) {
+    background: var(--fourth-color);
+    animation-delay: -0.6s;
+  }
+  
+  .loading span:nth-child(5) {
+    background: var(--fifth-color);
+    animation-delay: -0.5s;
+  }
+  
+  @keyframes scale {
+    0%, 40%, 100% {
+      transform: scaleY(0.05);
+    }
+    20% {
+      transform: scaleY(1);
+    }
+  }
+   */

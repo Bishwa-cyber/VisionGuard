@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Dashboard</title>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        
+        // Disable inspect mode
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || e.key === 'f12') {
+                e.preventDefault();
+            }
+        });
+
+        // Toggle light/dark mode
+        const toggleMode = () => {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        };
+
+        // Function to start webcam video
+        const startWebcam = () => {
+            const videoElements = document.querySelectorAll('video');
+            const constraints = {
+                video: true,
+                audio: false
+            };
+
+            navigator.mediaDevices.getUserMedia(constraints)
+                .then(stream => {
+                    videoElements.forEach(video => {
+                        video.srcObject = stream;
+                        video.play();
+                    });
+                })
+                .catch(error => {
+                    console.error("Error accessing webcam: ", error);
+                });
+        };
+
+        window.onload = startWebcam;  // Start webcam on window load
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .video-frame {
+            width: 100%;
+            height: 300px;
+            background-color: black;
+        }
+        body.dark-mode {
+            background-color: #1a202c;
+            color: white;
+        }
+        body.dark-mode .bg-white {
+            background-color: #2d3748;
+        }
+        body.dark-mode .bg-yellow-200 {
+            background-color: #4a5568;
+        }
+        body.dark-mode .text-gray-600 {
+            color: #edf2f7;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+<header class="bg-black text-white py-2">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+            <img alt="Indian Flag" class="mr-2" height="20" src="https://storage.googleapis.com/a1aa/image/izjiFIY5gXaFhXTAQ0RQT83Vj3h9OTyH3vb1-omnElA.jpg" width="30"/>
+            <span>भारत सरकार | Government of India</span>
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <a class="hover:underline" href="#">Skip to Main Content</a>
+            <a class="hover:underline" href="#">Accessibility Corner</a>
+            <a class="hover:underline" href="#">Site Map</a>
+            <div class="flex items-center space-x-1">
+                <a class="hover:underline" href="#">A-</a>
+                <a class="hover:underline" href="#">A</a>
+                <a class="hover:underline" href="#">A+</a>
+            </div>
+            <button onclick="toggleMode()" class="bg-gray-300 p-2 rounded">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+</header>
+<div class="bg-yellow-200 text-center py-2">
+    An initiative of the National Council of Educational Research and Training (Ministry of Education, Govt of India)
+</div>
+<nav class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4">
+        <img alt="DIKSHA Logo" height="40" src="https://storage.googleapis.com/a1aa/image/w4f33Kge85y2k0pfslBAd5SaIY78aZ4qK3whzfVxivU.jpg" width="100"/>
+        <ul class="flex space-x-6">
+            <li><a class="hover:underline" href="#">Home</a></li>
+            <li><a class="hover:underline" href="#">Dashboard</a></li>
+            <li><a class="hover:underline" href="#">About</a></li>
+            <li><a class="hover:underline" href="#">Get App</a></li>
+            <li><a class="hover:underline" href="#">Contribute</a></li>
+            <li><a class="hover:underline" href="#">User Guide</a></li>
+        </ul>
+        <div class="flex items-center space-x-4">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Explore As</button>
+            <button class="bg-white border border-blue-600 text-blue-600 px-4 py-2 rounded">Login</button>
+            <i class="fas fa-universal-access text-blue-600"></i>
+        </div>
+    </div>
+</nav>
+
+<main class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
+    <div class="flex flex-wrap md:flex-nowrap">
+        <aside class="w-full md:w-1/4 bg-white p-4 rounded shadow mb-4 md:mb-0">
+            <h2 class="text-xl font-bold mb-4">Filters</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="camera-area">Camera Coverage Area</label>
+                <select class="w-full border border-gray-300 rounded p-2" id="camera-area">
+                    <option>Garage</option>
+                    <option>Parking</option>
+                    <option>Inner Office</option>
+                    <option>Outer Office</option>
+                    <option>Main Office</option>
+                    <option>Reception Area</option>
+                    <option>Conference Room</option>
+                    <option>Break Room</option>
+                    <option>Lobby</option>
+                    <option>Corridor</option>
+                    <option>Restroom</option>
+                    <option>Staff Room</option>
+                    <option>Basement</option>
+                    <option>Roof</option>
+                    <option>Warehouse</option>
+                    <option>Storage Room</option>
+                    <option>Entrance</option>
+                    <option>Exit</option>
+                    <option>Outdoor Perimeter</option>
+                    <option>Loading Dock</option>
+                    <option>Garden Area</option>
+                </select>
+            </div>
+            <button class="filter-button bg-gray-300 text-gray-700 px-4 py-2 rounded mb-2 w-full">Apply Filters</button>
+            <button class="filter-button bg-gray-300 text-gray-700 px-4 py-2 rounded w-full">Clear All</button>
+        </aside>
+    </div>
+    <div class="flex flex-wrap md:flex-nowrap">
+        <aside class="w-full md:w-1/4 bg-white p-4 rounded shadow mb-4 md:mb-0">
+            <h2 class="text-xl font-bold mb-4">CCTV Controls</h2>
+            <div class="grid grid-cols-3 gap-2">
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Power</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Input</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Control</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Menu</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Channel</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Volume</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Home</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">OK</button>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded">Back</button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded">Left</button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded">Right</button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded">Up</button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded">Down</button>
+                <button class="bg-red-600 text-white px-4 py-2 rounded">Play</button>
+                <button class="bg-red-600 text-white px-4 py-2 rounded">Stop</button>
+                <button class="bg-gray-600 text-white px-4 py-2 rounded">Zoom In</button>
+                <button class="bg-gray-600 text-white px-4 py-2 rounded">Zoom Out</button>
+                <button class="bg-gray-600 text-white px-4 py-2 rounded">Change</button>
+            </div>
+        </aside>
+        <section class="w-full md:w-3/4 md:pl-4">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex space-x-4">
+                    <button class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>User Metrics</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Usage Metrics</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-book"></i>
+                        <span>Content Metrics</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Course Metrics</span>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-600">Last updated on 20 Feb 2025</span>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-bold mb-4">National and State wise User Metrics</h2>
+                <p class="text-gray-600 mb-4">User pattern across the nation and all the states</p>
+                <div class="flex flex-wrap md:flex-nowrap">
+                    <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                        <button class="bg-blue-100 text-blue-600 px-4 py-2 rounded mb-4 w-full">India</button>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                            <div>
+                                <p class="text-gray-600">Daily Active Users</p>
+                                <p class="text-2xl font-bold">1.22 Lakh</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                            <div>
+                                <p class="text-gray-600">Registered Users</p>
+                                <p class="text-2xl font-bold">1.76 Crore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img alt="Map of India showing user metrics in different states" height="300"
+                             src="https://storage.googleapis.com/a1aa/image/p2IGQY2Q-BVaJk-go9r7orqA0U67aoR991oSdx_LIJo.jpg" width="400"/>
+                        <div class="flex flex-wrap mt-4">
+                            <div class="w-1/2 text-gray-600">&gt;15 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;8 Lakh - 15 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;4 Lakh - 8 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;2 Lakh - 4 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;40,000 - 2 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&lt;40,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="grid grid-cols-2 gap-5 mt-101">
+                <div class="video-frame">
+                    <video id="video1" autoplay></video>
+                </div>
+                <div class="video-frame">
+                    <video id="video2" autoplay></video>
+                </div>
+                <div class="video-frame">
+                    <video id="video3" autoplay></video>
+                </div>
+                <div class="video-frame">
+                    <video id="video4" autoplay></video>
+                </div>
+            </div>
+            
+           
+            </div>
+        </section>
+    </div>
+</main>
+
+</body>
+</html>

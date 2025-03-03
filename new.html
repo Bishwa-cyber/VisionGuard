@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enable video streaming functionality
+            const videoElements = document.querySelectorAll('video');
+            videoElements.forEach((video, index) => {
+                // Simulate video stream URLs (you can replace these with actual URLs)
+                video.src = `D:\\ppf.mp4`; // Replace with actual stream URL
+                video.play();
+            });
+        });
+
+        // Disable right-click and inspection features
+        document.addEventListener('contextmenu', e => e.preventDefault());
+        document.addEventListener('keydown', e => {
+            if (e.key === 'F12') e.preventDefault();
+        });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .video-frame {
+            width: 100%;
+            height: 300px;
+            background-color: black;
+        }
+        @media (max-width: 768px) {
+            .video-frame {
+                height: 200px;
+            }
+        }  
+        .filter-button, .camera-control-button {
+            transition: background-color 0.3s;
+        }
+        .filter-button:hover, .camera-control-button:hover {
+            background-color: rgba(0, 0, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+<header class="bg-black text-white py-2">
+    <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+            <img alt="Indian Flag" class="mr-2" height="20" src="https://storage.googleapis.com/a1aa/image/izjiFIY5gXaFhXTAQ0RQT83Vj3h9OTyH3vb1-omnElA.jpg" width="30"/>
+            <span>भारत सरकार | Government of India</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a class="hover:underline" href="#">Skip to Main Content</a>
+            <a class="hover:underline" href="#">Accessibility Corner</a>
+            <a class="hover:underline" href="#">Site Map</a>
+            <div class="flex items-center space-x-1">
+                <a class="hover:underline" href="#">A-</a>
+                <a class="hover:underline" href="#">A</a>
+                <a class="hover:underline" href="#">A+</a>
+            </div>
+            <i class="fas fa-moon"></i>
+        </div>
+    </div>
+</header>
+<nav class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center py-4">
+        <img alt="DIKSHA Logo" height="40" src="https://storage.googleapis.com/a1aa/image/w4f33Kge85y2k0pfslBAd5SaIY78aZ4qK3whzfVxivU.jpg" width="100"/>
+        <ul class="flex space-x-6">
+            <li><a class="hover:underline" href="#">Home</a></li>
+            <li><a class="hover:underline" href="#">Dashboard</a></li>
+            <li><a class="hover:underline" href="#">About</a></li>
+            <li><a class="hover:underline" href="#">Get App</a></li>
+            <li><a class="hover:underline" href="#">Contribute</a></li>
+            <li><a class="hover:underline" href="#">User Guide</a></li>
+        </ul>
+        <div class="flex items-center space-x-4">
+            <button class="bg-blue-600 text-white px-4 py-2 rounded">Explore As</button>
+            <button class="bg-white border border-blue-600 text-blue-600 px-4 py-2 rounded">Login</button>
+            <i class="fas fa-universal-access text-blue-600"></i>
+        </div>
+    </div>
+</nav>
+<div class="bg-yellow-200 text-center py-2">
+    An initiative of the National Council of Educational Research and Training (Ministry of Education, Govt of India)
+</div>
+<main class="container mx-auto py-8">
+    <h1 class="text-3xl font-bold mb-4">Dashboard</h1>
+    <div class="flex flex-wrap md:flex-nowrap">
+        <aside class="w-full md:w-1/4 bg-white p-4 rounded shadow mb-4 md:mb-0">
+            <h2 class="text-xl font-bold mb-4">Filters</h2>
+            <div class="mb-4">
+                <label class="block text-gray-700 mb-2" for="state">State</label>
+                <select class="w-full border border-gray-300 rounded p-2" id="state">
+                    <option>Andhra Pradesh</option>
+                    <option>Arunachal Pradesh</option>
+                    <option>Assam</option>
+                    <option>Bihar</option>
+                    <!-- Add other states as needed -->
+                </select>
+            </div>
+            <button class="filter-button bg-gray-300 text-gray-700 px-4 py-2 rounded mb-2 w-full">Apply Filters</button>
+            <button class="filter-button bg-gray-300 text-gray-700 px-4 py-2 rounded w-full">Clear All</button>
+            <div class="w-full md:w-3/4 md:pl-4">
+                <div class="flex flex-col mb-4">
+                    <h2 class="text-xl font-bold mb-4">Camera Controls</h2>
+                    <div class="flex space-x-2 mb-4">
+                        <button class="camera-control-button bg-blue-600 text-white px-4 py-2 rounded">Up</button>
+                        <button class="camera-control-button bg-blue-600 text-white px-4 py-2 rounded">Down</button>
+                        <button class="camera-control-button bg-blue-600 text-white px-4 py-2 rounded">Left</button>
+                        <button class="camera-control-button bg-blue-600 text-white px-4 py-2 rounded">Right</button>
+                    </div>
+                    <div class="flex space-x-2 mb-4">
+                        <button class="camera-control-button bg-blue-600 text-white px-4 py-2 rounded">Zoom In</button>
+                        <button class="camera-control-button bg-blue-600 text-white px-4 py-2 rounded">Zoom Out</button>
+                    </div>
+                    <div class="flex space-x-2 mb-4">
+                        <button class="camera-control-button bg-green-600 text-white px-4 py-2 rounded">Record</button>
+                        <button class="camera-control-button bg-red-600 text-white px-4 py-2 rounded">Stop</button>
+                        <button class="camera-control-button bg-gray-600 text-white px-4 py-2 rounded">Play</button>
+                    </div>
+                </div>
+        </aside>
+        <section class="w-full md:w-3/4 md:pl-4">
+            <div class="flex justify-between items-center mb-4">
+                <div class="flex space-x-4">
+                    <button class="flex items-center space-x-2 text-blue-600">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>User Metrics</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Usage Metrics</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-book"></i>
+                        <span>Content Metrics</span>
+                    </button>
+                    <button class="flex items-center space-x-2 text-gray-600">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Course Metrics</span>
+                    </button>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-600">Last updated on 20 Feb 2025</span>
+                    <button class="bg-blue-600 text-white p-2 rounded-full">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded shadow">
+                <h2 class="text-xl font-bold mb-4">National and State wise User Metrics</h2>
+                <p class="text-gray-600 mb-4">User pattern across the nation and all the states</p>
+                <div class="flex flex-wrap md:flex-nowrap">
+                    <div class="w-full md:w-1/2 mb-4 md:mb-0">
+                        <button class="bg-blue-100 text-blue-600 px-4 py-2 rounded mb-4 w-full">India</button>
+                        <div class="flex items-center space-x-4 mb-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                            <div>
+                                <p class="text-gray-600">Daily Active Users</p>
+                                <p class="text-2xl font-bold">1.22 Lakh</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-user text-blue-600"></i>
+                            <div>
+                                <p class="text-gray-600">Registered Users</p>
+                                <p class="text-2xl font-bold">1.76 Crore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <img alt="Map of India showing user metrics in different states" height="300" src="https://storage.googleapis.com/a1aa/image/p2IGQY2Q-BVaJk-go9r7orqA0U67aoR991oSdx_LIJo.jpg" width="400"/>
+                        <div class="flex flex-wrap mt-4">
+                            <div class="w-1/2 text-gray-600">&gt;15 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;8 Lakh - 15 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;4 Lakh - 8 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;2 Lakh - 4 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&gt;40,000 - 2 Lakh</div>
+                            <div class="w-1/2 text-gray-600">&lt;40,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="video-card">
+                  <div class="video-frame" id="video1"></div>
+                  <div class="p-4">
+                      <h2 class="font-bold">Camera 1</h2>
+                      <p class="text-gray-600">Updated: 15-05-2024</p>
+                  </div>
+              </div>
+              <div class="video-card">
+                  <div class="video-frame" id="video2"></div>
+                  <div class="p-4">
+                      <h2 class="font-bold">Camera 2</h2>
+                      <p class="text-gray-600">Updated: 15-05-2024</p>
+                  </div>
+              </div>
+              <div class="video-card">
+                  <div class="video-frame" id="video3"></div>
+                  <div class="p-4">
+                      <h2 class="font-bold">Camera 3</h2>
+                      <p class="text-gray-600">Updated: 15-05-2024</p>
+                  </div>
+              </div>
+              <div class="video-card">
+                  <div class="video-frame" id="video4"></div>
+                  <div class="p-4">
+                      <h2 class="font-bold">Camera 4</h2>
+                      <p class="text-gray-600">Updated: 15-05-2024</p>
+                  </div>
+              </div>
+          </div>
+            <script>
+              // Access the video elements
+              const videoElements = [
+                  document.getElementById('video1'),
+                  document.getElementById('video2'),
+                  document.getElementById('video3'),
+                  document.getElementById('video4')
+              ];
+          
+              // Function to start video streams
+              async function startVideoStreams() {
+                  const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                  videoElements.forEach(video => {
+                      video.innerHTML = '<video autoplay playsinline muted></video>';
+                      video.querySelector('video').srcObject = stream;
+                  });
+              }
+          
+              // Start the video streams when the page loads
+              window.onload = startVideoStreams;
+          </script>
+        </section>
+    </div>
+</main>
+</body>
+</html>
+
+
+
+

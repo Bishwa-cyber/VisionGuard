@@ -1,0 +1,91 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Register Page
+  </title>
+  <script>
+    // Disable right click
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Disable inspect mode
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'F12' || e.key === 'f12') {
+        e.preventDefault();
+      }
+    });
+
+    // Disable inspect mode on right click
+    document.addEventListener('mousedown', function(e) {
+      if (e.button === 2) {
+        e.preventDefault();
+      }
+    });
+  </script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-200 flex items-center justify-center min-h-screen" style="background-image: url('Images/2642092.jpg'); background-size: cover; background-position: center;">
+
+
+
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+   <div class="text-center mb-6">
+    <img alt="CP PLUS logo" class="mx-auto mb-4" height="50" src="https://storage.googleapis.com/a1aa/image/aBzy-V5wKxcftlrVIETXHSSew800tqjfPkQYnyG2A48.jpg" width="100"/>
+    <h1 class="text-2xl font-bold text-gray-800">
+     Register
+    </h1>
+    <div class="border-b-2 border-red-500 w-16 mx-auto mt-2">
+    </div>
+   </div>
+   <form>
+    <div class="mb-4">
+     <label class="block text-gray-700 font-semibold mb-2" for="username">
+      Username
+     </label>
+     <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" id="username" placeholder="Username" type="text"/>
+    </div>
+    <div class="mb-4">
+     <label class="block text-gray-700 font-semibold mb-2" for="email">
+      Email
+     </label>
+     <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" id="email" placeholder="Email" type="email"/>
+    </div>
+    <div class="mb-4">
+     <label class="block text-gray-700 font-semibold mb-2" for="password">
+      Password
+     </label>
+     <div class="relative">
+      <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" id="password" placeholder="Password" type="password"/>
+      <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500">
+       <i class="fas fa-eye">
+       </i>
+      </span>
+     </div>
+    </div>
+    <div class="mb-6">
+     <label class="block text-gray-700 font-semibold mb-2" for="confirm-password">
+      Confirm Password
+     </label>
+     <div class="relative">
+      <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" id="confirm-password" placeholder="Confirm Password" type="password"/>
+      <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-500">
+       <i class="fas fa-eye">
+       </i>
+      </span>
+     </div>
+    </div>
+    <button class="w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-700 transition duration-200" type="submit">
+     Register
+    </button>
+   </form>
+   <div class="text-center mt-4">
+    <p class="text-gray-600">Already have an account? <a class="text-gray-800 hover:text-gray-900" href="login.html">Login</a></p>
+   </div>
+  </div>
+ </body>
+</html>
