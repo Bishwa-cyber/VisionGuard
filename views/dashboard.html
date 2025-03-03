@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveillance Management System</title>
+    <link rel = "icon" href = "/surveillance.jpg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <style>
+.nav-dashboard{
+  width:100%;
+  height : 65px;
+  font-size: 20px;
+  border : 1px solid black;
+}
+.second{
+  width:100%;
+  height : 770px;
+  border : 1px solid black;
+  display : flex;
+  flex-wrap : wrap;
+}
+.div1{
+  position: relative;
+  left :100px;
+  height : 770px;
+  width : 70px;
+  background-color: rgb(7, 46, 46);
+  border: 1px solid black;
+}
+.div2{
+  height : 770px;
+  width : 1200px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin-left : 90px;
+  background-color: aliceblue;
+}
+.d{
+  border: 1px solid black;
+  height : 300px;
+  width : 550px;
+  margin-top : 10px;
+  margin-left: 25px;
+}
+.div{
+  height :650px;
+  width : 300px;
+  border: 1px solid black;
+}
+.i{
+  border: 1px solid black;
+  height : 400px;
+  width : 220px;
+  margin-top :15px !important;
+  margin-left:10px !important;
+}
+.j{
+  border: 1px solid black;
+  height : 230px;
+  width : 220px;
+  margin-top :65px !important;
+  margin-left:10px !important;
+
+}
+.d-flex{
+  position: relative;
+  left : 10px;
+}
+iframe{
+  border: 1px solid black;
+  height : 300px;
+  width : 550px;
+}
+  </style>
+  </head><body>
+  <div class = "nav-dashboard">
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/security"><i class="fa-solid fa-shield-halved"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/security"><b class = "a">Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><b class = "a">About</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href = "/dashboard"><b class = "a">Dashboard</b></a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-dark" type="submit">Search</button>
+          </form>
+  </div>
+      </div>
+    </nav>
+  </div>
+  <div class = "second">
+    <div class = "div1">
+ <ul type = "square">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    </div>
+    <div class="div2">
+        <div class = "d g" style = "width :1000px;height: 700px; position: relative; top:15px;left:70px;">
+
+          <iframe style = "width :1000px;height: 700px;" alt="Backyard Camera 3" class="w-full h-full object-cover rounded" height="300" src="http://192.168.202.224:4747" allowfullscreen></iframe>
+
+        </div>
+        
+    </div>
+    <div class="div3">
+        <div class = "e i" style = "font-weight: bold;">
+          <h4 style = "text-align: center;">Server Room</h4>
+        <div id = "server">
+          <a href = "/footage1" class = "y">
+            Camera-01
+          </a>
+          
+          <a href = "footage2" class = "z">
+            Camera-02
+          </a>
+          <br>
+          <a href = "footage1" class = "y">
+            Camera-03
+          </a>
+          <a href = "footage2" class = "z">
+            Camera-04
+          </a>
+          <br>
+          <a href = "footage1"class = "y">
+            Camera-05
+          </a>
+          <a href = "footage2" class = "z">
+            Camera-06
+          </a>
+          <br>
+          <a href = "footage1"class = "y">
+           Camera-07
+          </a>
+          <a href = "footage2" class = "z">
+            Camera-08
+          </a>
+          <br>
+          <a href = "footage1" class = "y">
+            Camera-09
+          </a>
+          <a href = "footage2" class = "z">
+            Camera-10
+          </a>
+          <br>
+          <a href = "footage1" class = "y">
+            Camera-11
+          </a>
+         
+          <a href = "footage2" class = "z">
+            Camera-12
+          </a>
+          <br>
+          <a href = "footage1" class = "y">
+            Camera-13
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-14
+          </a>
+          <br>
+          <a href = "footage1" class = "y">
+            Camera-15
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-16
+          </a>
+          <a href = "footage1" class = "y">
+            Camera-17
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-18
+          </a>
+          <a href = "footage1" class = "y">
+            Camera-19
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-20
+          </a>
+          <a href = "footage1" class = "y">
+            Camera-21
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-22
+          </a>
+          <a href = "footage1" class = "y">
+            Camera-23
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-24
+          </a>
+          <a href = "footage1" class = "y">
+            Camera-25
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-27
+          </a>
+          <a href = "footage1" class = "y">
+            Camera-28
+          </a>
+          <a href = "footage2" class = "z">
+           Camera-29
+          </a>
+        </div>
+          
+        </div>
+        <div class = "e j">
+          <div class="month">      
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>
+                August<br>
+                <span style="font-size:18px">2021</span>
+              </li>
+            </ul>
+          </div>
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+          <ul class="days">  
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li><span class="active">10</span></li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src = "/js/script.js"></script>
+</body>
+</html>
