@@ -1,0 +1,59 @@
+names:
+- Excavator
+- Gloves
+- Hardhat
+- Ladder
+- Mask
+- NO-Hardhat
+- NO-Mask
+- NO-Safety Vest
+- Person
+- SUV
+- Safety Cone
+- Safety Vest
+- bus
+- dump truck
+- fire hydrant
+- machinery
+- mini-van
+- sedan
+- semi
+- trailer
+- truck and trailer
+- truck
+- van
+- vehicle
+- wheel loader
+- forklift
+- crane
+- conveyor belt
+- bulldozer
+- roller compactor
+- cement mixer truck
+- industrial robot
+- pallet jack
+- scaffolding
+- generator
+- power drill
+- welding machine
+- lathe machine
+- CNC machine
+- pressure washer
+- electric hoist
+- power saw
+- cherry picker
+- mobile crane
+- skid-steer loader
+- motor grader
+
+nc: 45  # Updated number of classes to reflect the new additions
+roboflow:
+  license: CC BY 4.0
+  project: construction-site-safety
+  url: https://universe.roboflow.com/roboflow-universe-projects/construction-site-safety/dataset/30
+  version: 30
+  workspace: roboflow-universe-projects
+
+test: ../test/images
+train: ../train/images
+val: ../valid/images
