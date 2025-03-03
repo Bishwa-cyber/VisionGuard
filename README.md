@@ -1,139 +1,137 @@
-# VisionGuard
-
-**VisionGuard** is an advanced real-time object detection and monitoring system built using YOLOv8. It can detect, track, and log various objects, including people, machinery, and equipment, from live video streams such as IP cameras or local video files. It is designed for environments like classrooms, factories, and warehouses, providing dynamic object tracking and people counting features for enhanced monitoring and safety.
-
-![VisionGuard Banner](https://yourimageurl.com/banner-image) <!-- Optional banner image -->
-
-## Features
-- **Real-Time Object Detection**: Tracks objects such as people, machinery, and furniture in live video streams using YOLOv8.
-- **Multiple Input Sources**: Supports IP cameras, webcam, and pre-recorded video files.
-- **Dynamic People Counting**: Automatically logs entry/exit times and provides a live count of people detected in the video.
-- **Custom Object Detection**: Easily customizable for detecting any objects of interest.
-- **CSV Logging**: Logs detections with timestamps for future analysis.
-- **Web Interface Integration**: View raw and processed video streams (object detection overlays) in a seamless web interface.
-- **Support for Multiple Environments**: Ideal for classrooms, warehouses, factories, and security monitoring systems.
+# **VisionGuard: Real-Time Object Detection and Monitoring System**  
+**VisionGuard** is an advanced real-time object detection and monitoring system, designed to track, analyze, and process video streams from IP cameras or video sources. This system is ideal for environments such as classrooms, warehouses, factories, and surveillance areas. It uses YOLOv8 to detect various objects like people, machinery, and equipment, providing dynamic people counting, object tracking, and safety monitoring features.
 
 ---
 
-## Table of Contents
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Flowchart](#flowchart)
-- [Project Structure](#project-structure)
-- [Demo](#demo)
-- [Contributing](#contributing)
-- [License](#license)
+## **Features**
+- **Real-Time Object Detection:** Detects objects such as people, chairs, laptops, machinery, and other items in live video streams.
+- **Multiple Input Sources:** Supports IP cameras, webcam feeds, and local video files.
+- **Dynamic People Counting:** Logs entry/exit of people detected in the stream and tracks the current number of people.
+- **Customizable Object Detection:** Detects various objects (e.g., vehicles, equipment, furniture) with the ability to customize the types of objects to detect.
+- **CSV Logging:** Attendance and object detection logs are stored in `.csv` files for future analysis.
+- **Web Integration:** Displays raw and processed video streams (with detection overlays) on a web interface.
+- **Real-Time Alerts:** Alerts for flagged objects (e.g., worker without safety equipment) in real-time.
 
----
 
-## Installation
 
-### Requirements
-- **Python 3.8+**
-- **Node.js** (for web interface)
-- **ffmpeg** (for video stream handling)
-- **pip** (for installing Python dependencies)
+## **Requirements**
+Ensure you have the following dependencies installed before running the project:
 
-### Step 1: Clone the Repository
 
-### git clone https://github.com/yourusername/VisionGuard.git
+**pip install opencv-python
+pip install ultralytics
+pip install ffmpeg-python
+pip install pandas
+**
+
+Additional Requirements:
+
+Node.js for the web interface.
+FFmpeg (for handling video streams).
+Steps to Run the Project
+1. Clone the Repository:
+Download the project to your system.
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/VisionGuard.git
 cd VisionGuard
-Step 2: Install Python Dependencies
+2. Install Python Dependencies:
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Step 3: Install Node.js Dependencies (For Web Interface)
-Navigate to the frontend directory and install Node dependencies:
+3. Install Node.js Dependencies (for the web interface):
+Navigate to the frontend directory and install the required Node.js packages:
 
 bash
 Copy
 Edit
 cd frontend
 npm install
-Step 4: Install FFmpeg (Optional, for live stream handling)
-Windows: FFmpeg Windows Installation Guide
-Linux: Install via package manager:
-bash
-Copy
-Edit
-sudo apt install ffmpeg
-macOS: Install via Homebrew:
-bash
-Copy
-Edit
-brew install ffmpeg
-Usage
-1. Start Object Detection (Python Backend)
-To start object detection with a video source (e.g., an IP camera or local video file), run the following command:
+4. Start Object Detection:
+Run the detection system with the following command:
 
 bash
 Copy
 Edit
 python detects.py --weights yolov8n.pt --source "http://192.168.42.137:4747/video" --conf-thres 0.25 --img-size 640 --mode monitor
-weights: Path to the YOLOv8 model (e.g., yolov8n.pt).
-source: IP camera stream or local video file.
+weights: YOLOv8 model weights (e.g., yolov8n.pt).
+source: Video source (e.g., IP camera stream or video file).
 conf-thres: Confidence threshold for detection.
 img-size: Image size for inference.
 mode: Set to monitor for real-time monitoring.
-2. Start the Web Interface (Express.js Frontend)
-To start the web interface that displays both raw and processed video streams, navigate to the frontend folder and run:
-
+5. Run the Web Interface:
 bash
 Copy
 Edit
 npm start
-Access the dashboard at http://localhost:3000/dashboard.
+Access the web interface at http://localhost:3000/dashboard.
 
-3. Live Stream Both Raw and Processed Videos
-View the Raw Video Stream and Processed Object Detection Stream side by side on the web interface.
-The processed stream will display bounding boxes for detected objects, people, etc.
+### Project Workflow
+
+
+
+1. Video Stream and Object Detection
+The system captures the live video stream (IP camera or video file) and runs the object detection using YOLOv8.
+Object detections are drawn as bounding boxes over the live video.
+2. Log People and Object Data
+The system logs the detection of people, machinery, and other objects in real-time.
+CSV files store the detection data, including timestamps for people entering/exiting the monitored area.
+3. Display Raw and Processed Video
+Raw video (without detections) and processed video (with object detections) are displayed side-by-side on the web interface.
+
+
+
 Flowchart
-Below is a flowchart to describe the VisionGuard process:
-
 
 flowchart TD
-    A[Start] --> B[Camera/Video Feed]
-    B --> C[Send feed to Python Backend (OpenCV)]
+    A[Start] --> B[Capture Video Feed]
+    B --> C[Send Feed to Python Backend]
     C --> D[Run YOLOv8 Detection on Each Frame]
     D --> E[Draw Bounding Boxes, Log Detected Objects]
     E --> F[Stream Processed Frames via Flask]
-    F --> G[Serve Frames to Web Interface (Express.js)]
+    F --> G[Serve Frames to Web Interface]
     G --> H[Display Raw & Processed Streams on Dashboard]
     H --> I[Logs Saved to CSV for Analysis]
     I --> J[End]
 
-    
-### Project Structure ###
+### Project Structure
+
 
 VisionGuard/
 │
-├── detects.py                # Main Python script for object detection
+├── detects.py                # Main script for real-time detection
 ├── requirements.txt          # Python dependencies
 ├── frontend/                 # Web interface (Express.js)
-│   ├── views/
-│   ├── public/
+│   ├── views/                # EJS templates
+│   ├── public/               # Static files (CSS, JS, images)
 │   └── app.js                # Express.js server
-├── static/                   # Static files (CSS, JS, images)
+├── static/                   # Static files for web interface
 ├── templates/                # EJS templates for web pages
-├── flask_server.py           # Flask app to stream processed video
+├── flask_server.py           # Flask server to stream processed video
 └── README.md                 # Project documentation
 
 
-### Demo
-You can watch a demo of VisionGuard here.
+Demo
+### Watch a demo of VisionGuard here.
 
-Real-time Detection: Detect people, objects, and count them dynamically.
-Web Dashboard: Monitor both raw and processed streams via the web interface.
-CSV Logging: Analyze object detection logs with timestamps.
-Contributing
-We welcome contributions! Here's how you can help:
+**Real-Time Detection: Detect and track objects like people, chairs, and machinery.
+Web Dashboard: Monitor the raw and processed video streams in real-time.
+CSV Logging: Log object detections for further analysis.
+Contributors
+Bishwa Bhushan Palar
+Feel free to contribute by following the steps below:**
 
- ### Fork the repository.
+Fork the repository.
 Create a new feature branch (git checkout -b feature-branch).
-Commit your changes (git commit -am 'Add a new feature').
+Commit your changes (git commit -am 'Add new feature').
 Push to the branch (git push origin feature-branch).
 Open a pull request.
-### License
+License
 This project is licensed under the MIT License. See the LICENSE file for more details.
+
+Contact
+If you have any questions or suggestions, feel free to reach out to bishwapalar657@gmail.com.
+
